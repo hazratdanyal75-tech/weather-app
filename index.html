@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hazrat Danyal Weather App</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+</head>
+<body>
+
+    <div class="container">
+        <div class="welcome-header">
+            <h2 id="welcomeText">Hazrat Danyal Weather App</h2>
+            <p class="dev-tag">2nd Semester CS Project 🎓</p>
+        </div>
+
+        <div class="search-container">
+            <div class="search-section">
+                <input type="text" id="cityInput" placeholder="Shehar ya Gaon ka naam..." list="citySuggestions">
+                <datalist id="citySuggestions">
+                    <option value="Malakand"><option value="Karachi"><option value="Lahore">
+                    <option value="Peshawar"><option value="Islamabad"><option value="Lower Dir">
+                </datalist>
+                
+                <button id="voiceBtn" class="icon-btn" title="Voice Search"><i class="fa-solid fa-microphone"></i></button>
+                <button id="findVillageBtn" class="icon-btn" title="Mera Gaon"><i class="fa-solid fa-location-dot"></i></button>
+                <button id="searchBtn"><i class="fa-solid fa-magnifying-glass"></i></button>
+
+                <div class="settings-dropdown">
+                    <button id="menuBtn" class="dots-btn"><i class="fa-solid fa-ellipsis-vertical"></i></button>
+                    <div id="menuContent" class="dropdown-content">
+                        <a href="#" id="toggleTheme"><i class="fa-solid fa-moon"></i> Dark/Light Mode</a>
+                        <a href="#" id="soundToggle"><i class="fa-solid fa-volume-xmark"></i> Sound On/Off</a>
+                    </div>
+                </div>
+            </div>
+            <div id="recentSearches" class="recent-chips"></div>
+        </div>
+
+        <div class="news-ticker">
+            <div class="ticker-wrapper">
+                <span id="weatherNews">⚠️ Alert: Maosam ki har update ke liye Hazrat Danyal App use karein. | 🌦️ Cricket Score: Check Today's status below!</span>
+            </div>
+        </div>
+
+        <div class="weather-card">
+            <div class="main-info">
+                <h1 id="cityName">Malakand</h1>
+                <p id="description">Sunny</p>
+                <div class="temp-display">
+                    <img id="weatherIcon" src="https://openweathermap.org/img/wn/01d@2x.png" alt="icon">
+                    <span id="temp">24</span>°C
+                </div>
+            </div>
+
+            <div class="ai-suggestion-card">
+                <div class="suggestion-header"><i class="fa-solid fa-robot"></i> <b>Hazrat Danyal AI Advice</b></div>
+                <p id="activityAdvice">Checking best outfit for you...</p>
+                <p id="travelAdvice" style="font-size: 11px; margin-top: 5px; color: #ffcc80;"></p>
+            </div>
+
+            <div class="activity-grid">
+                <div class="activity-item">
+                    <p>🏏 Cricket Chance</p>
+                    <div class="score-bar"><div id="cricketScore" class="fill"></div></div>
+                </div>
+                <div class="activity-item">
+                    <p>👕 Washing Day</p>
+                    <div class="score-bar"><div id="washScore" class="fill"></div></div>
+                </div>
+            </div>
+
+            <div class="stats-grid">
+                <div class="stat-box"><i class="fa-solid fa-droplet"></i><p>Humidity</p><span id="humidity">45%</span></div>
+                <div class="stat-box"><i class="fa-solid fa-wind"></i><p>Wind</p><span id="windSpeed">12 km/h</span></div>
+                <div class="stat-box"><i class="fa-solid fa-sun"></i><p>UV Index</p><span id="uvIndex">5.2</span>
+                    <div class="meter-bg"><div id="uvBar" class="meter-fill"></div></div>
+                </div>
+            </div>
+
+            <div class="prayer-card">
+                <p><i class="fa-solid fa-mosque"></i> Agli Namaz: <span id="nextPrayer">Asr (5:15 PM)</span></p>
+            </div>
+        </div>
+
+        <div class="feedback-section">
+            <p>Aapko App kaisi lagi?</p>
+            <div class="reaction-buttons">
+                <button id="likeBtn" class="react-btn"><i class="fa-solid fa-thumbs-up"></i> <span id="likeCount">124</span></button>
+                <button id="dislikeBtn" class="react-btn"><i class="fa-solid fa-thumbs-down"></i> <span id="dislikeCount">2</span></button>
+            </div>
+            <p id="thanksMsg" class="thanks-text">Shukriya! Aapki raye save kar li gayi hai.</p>
+        </div>
+
+        <div class="qr-container">
+            <p>Scan to Share</p>
+            <div id="qrcode"></div>
+            <button id="downloadCard" class="viral-btn"><i class="fa-solid fa-camera"></i> Viral Share Card</button>
+        </div>
+
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
