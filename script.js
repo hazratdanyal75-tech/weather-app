@@ -1,4 +1,4 @@
-const apiKey = "YOUR_OPENWEATHER_API_KEY"; // Apni API Key yahan likhein
+const apiKey = "12e66aee9a7b5c3141fc50e34412d03b"; // Apni API Key yahan likhein
 
 // 1. Initial Load
 window.onload = () => {
